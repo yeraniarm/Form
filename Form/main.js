@@ -91,19 +91,12 @@ const formulario = new Vue({
         },
         saveData(){
             let data = localStorage.getItem('Data');
-            let dataList = [];
             if (data) {
-                dataList = JSON.parse(data);
-                dataList.push(this.userData);
-                localStorage.setItem('Data',JSON.stringify(dataList));
-                data = localStorage.getItem('Data');
-                tableBody.storageData = JSON.parse(data);
+                let dataList = JSON.parse(data);
+                this.saveInLocalStorage(dataList);
             } else {
-                dataList = [];
-                dataList.push(this.userData);
-                localStorage.setItem('Data',JSON.stringify(dataList));
-                data = localStorage.getItem('Data');
-                tableBody.storageData = JSON.parse(data);
+                let dataList = [];
+                this.saveInLocalStorage(dataList);
             }
             this.userData.name = '';
             this.userData.lastname = '';
@@ -111,6 +104,12 @@ const formulario = new Vue({
             this.userData.date = ''
             this.userData.email = '';
             this.userData.favChar = '';
+        },
+        saveInLocalStorage(dataList){
+            dataList.push(this.userData);
+            localStorage.setItem('Data',JSON.stringify(dataList));
+            data = localStorage.getItem('Data');
+            tableBody.storageData = JSON.parse(data);
         }
     }
 })
