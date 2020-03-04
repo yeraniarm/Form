@@ -1,0 +1,20 @@
+body{
+    background: #FFF4FF;
+}
+
+#carrusel{
+       width: 50%;
+       height: 50%;
+       margin: 1rem auto;
+
+   }
+
+.button{
+    background: none;
+    border-color: #6195E8;
+    color: #6195E8;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  filter: invert(1);
+}

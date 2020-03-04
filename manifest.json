@@ -1,0 +1,29 @@
+{
+    "name": "BT21 Carousel",
+    "short_name": "BT21",
+    "description": "BT21 Carousel, Form and Table",
+    "background_color": "#E8B5B0",
+    "theme_color": "#FFF",
+    "orientation": "portrait",
+    "display": "standalone",
+    "start_url": "./?utm_source=web_app_manifest",
+    "scope": "./",
+    "lang": "es-MX",
+    "icons": [
+        {
+            "src": "img/chimmy.png",
+            "sizes": "1024x1024",
+            "type": "image/png"
+        },
+        {
+            "src": "img/chimmy4.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "img/chimmy3.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ]
+}
